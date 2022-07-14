@@ -14,6 +14,7 @@ import RegistroUsuarios from './componentes/RegistroUsuarios';
 import {Helmet} from "react-helmet";
 import favicon from './imagenes/logo.png';
 import Fondo from './elementos/Fondo';
+import RutaPrivada from './componentes/RutaPrivada';
 
 WebFont.load({
   google: {
@@ -35,18 +36,26 @@ const Index = () => {
             <Route path="/iniciar-sesion" element={<InicioSesion/>}/>
             <Route path="/crear-cuenta" element={<RegistroUsuarios/>}/>
             <Route path="/categorias" element={
+              <RutaPrivada>
 									<GastosPorCategoria />
+              </RutaPrivada>
 						}/>
               <Route path="/lista" element={
+                <RutaPrivada>
 									<ListaDeGastos />
+                </RutaPrivada>
 						} />
 
 						<Route path="/editar/:id" element={
+              <RutaPrivada>
 									<EditarGasto />
+              </RutaPrivada>    
 						} />
 
             <Route path="/" element={
+                <RutaPrivada>
 									<App />
+                </RutaPrivada>
 						}/>
       </Routes>
           
