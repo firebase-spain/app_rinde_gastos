@@ -5,7 +5,7 @@ import App from './App';
 import WebFont from 'webfontloader';
 import Contenedor from './elementos/Contenedor';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
-
+import {AuthProvider} from './contextos/AuthContext';
 import EditarGasto from './componentes/EditarGasto';
 import GastosPorCategoria from './componentes/GastosPorCategoria';
 import InicioSesion from './componentes/InicioSesion';
@@ -28,7 +28,7 @@ const Index = () => {
 			  <link rel="icon" href={favicon} type="image/x-icon"/>
         <title>Hola</title>
 		</Helmet>
-
+   <AuthProvider>
     <BrowserRouter>
       <Contenedor>
       <Routes>
@@ -52,7 +52,7 @@ const Index = () => {
           
       </Contenedor>
   </BrowserRouter>
-
+  </AuthProvider>
   <Fondo/>
   </>
   );
