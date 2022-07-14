@@ -11,7 +11,8 @@
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4",
-    "webfontloader": "^1.6.28"
+    "webfontloader": "^1.6.28",
+    "react-router-dom": "^6.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
